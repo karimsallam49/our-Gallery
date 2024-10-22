@@ -38,7 +38,7 @@
       bottom: 0;
       font-size: 16px;
       color: white;
-      background-color: rgba(0, 0, 0, 0.5);
+      /* background-color: rgba(0, 0, 0, 0.5); */
       padding: 8px 12px;
       border-radius: 4px;
       text-align: center;
@@ -47,12 +47,15 @@
       width: auto;
       display: flex;
       gap: .5rem;
+      transition: .2s;
       img{
 
         max-width: 100px;
         height: 80px;
         cursor: pointer;
         border: none;
+        transition: .2s;
+        object-fit: cover;
       }
       .currentphoto{
 

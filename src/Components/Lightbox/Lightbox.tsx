@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
-import LightboxImage from './Lighboximage';
+import LightboxImage from './LightBoxImage/Lighboximage';
 import styles from './Lightbox.module.css';
 
 type LightboxProps ={
