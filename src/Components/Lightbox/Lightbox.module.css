@@ -1,0 +1,174 @@
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem 0;
+
+  .content {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+
+    img {
+      max-width: 80%;
+      height: 100%;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    }
+
+
+
+    .pagination {
+      bottom: 0;
+      font-size: 16px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-align: center;
+      justify-content: center;
+      min-width: 60px;
+      width: auto;
+      display: flex;
+      gap: .5rem;
+      img{
+
+        max-width: 100px;
+        height: 80px;
+        cursor: pointer;
+        border: none;
+      }
+      .currentphoto{
+
+        border: solid 2px white;
+      }
+    }
+  }
+
+  .close, .prev, .next {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  .close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .prev {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .next {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .lightbox .content {
+    max-width: 90%;
+    max-height: 85%;
+  }
+
+  .lightbox .content img {
+    max-width: 100%;
+    max-height: 85%;
+  }
+
+  .lightbox .content .pagination {
+    font-size: 14px;
+    padding: 6px 10px;
+    bottom: 12px;
+  }
+
+  .lightbox .close,
+  .lightbox .prev,
+  .lightbox .next {
+    font-size: 22px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightbox .content {
+    max-width: 85%;
+    max-height: 75%;
+  }
+
+  .lightbox .content img {
+    max-width: 100%;
+    max-height: 75%;
+  }
+
+  .lightbox .content .pagination {
+    font-size: 12px;
+    padding: 5px 8px;
+    bottom: 10px;
+    width: 90%;
+
+    img{
+      max-width: 60px;
+    }
+  }
+
+  .lightbox .close,
+  .lightbox .prev,
+  .lightbox .next {
+    font-size: 20px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox .content {
+    max-width: 90%;
+    max-height: 70%;
+  }
+
+  .lightbox .content img {
+    max-width: 100%;
+    max-height: 70%;
+  }
+
+  .lightbox .content .pagination {
+    font-size: 10px;
+    padding: 4px 6px;
+    bottom: 8px;
+  }
+
+  .lightbox .close,
+  .lightbox .prev,
+  .lightbox .next {
+    font-size: 18px;
+    padding: 4px;
+  }
+}
