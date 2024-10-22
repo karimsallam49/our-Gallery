@@ -3,7 +3,7 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 5px;
     padding: 16px;
-    height: 80vh;
+    /* height: 80vh; */
     overflow-y: hidden;
   
     img {
@@ -17,6 +17,13 @@
         transform: scale(1.05);
       }
     }
+  }
+
+  .column{
+
+    height: 200px;
+    width: auto;
+  
   }
   @media (max-width:700px) {
 

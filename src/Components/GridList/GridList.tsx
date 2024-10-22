@@ -1,7 +1,7 @@
 
 import styles from './ImageGrid.module.css';
 
-const{grid}=styles
+const{grid,column}=styles
 
 type ImageGridProps= {
   images: string[];
@@ -12,13 +12,16 @@ const GridList= ({ images, onImageClick }:ImageGridProps) => {
   return (
     <div className={grid}>
       {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`Gallery Image ${index + 1}`}
-          onClick={() => onImageClick(index)}
-          loading="lazy"
-        />
+        <div className={column}>
+
+          <img
+            key={index}
+            src={src}
+            alt={`Gallery Image ${index + 1}`}
+            onClick={() => onImageClick(index)}
+            loading="lazy"
+          />
+        </div>
       ))}
     </div>
   );
