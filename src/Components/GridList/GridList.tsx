@@ -6,11 +6,12 @@ const{grid,column}=styles
 type ImageGridProps= {
   images: string[];
   onImageClick: (index: number) => void;
+  direction:"rtl"|"ltr"
 }
 
-const GridList= ({ images, onImageClick }:ImageGridProps) => {
+const GridList= ({ images, onImageClick ,direction="rtl"}:ImageGridProps) => {
   return (
-    <div className={grid}>
+    <div className={grid} style={{direction}}>
       {images.map((src, index) => (
         <div className={column}>
 

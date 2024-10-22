@@ -22,7 +22,7 @@ const Gallery= () => {
 
   return (
     <div>
-      <GridList images={galleryindex} onImageClick={openLightbox} />
+      <GridList images={galleryindex} onImageClick={openLightbox} direction='rtl'/>
       {lightboxOpen && (
         <Lightbox
           images={galleryindex}
